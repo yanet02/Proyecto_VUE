@@ -10,8 +10,10 @@ import CalculadoraV2 from "../Pages/CalculadoraV2.vue";
 import Eventos from "../Pages/Eventos.vue";
 import Padre from "../Pages/Padre.vue";
 import Recorrido from "../Pages/recorrido.vue";
-import Listas from "../Pages/Listas.vue";
-
+import Listas from "../Pages/Listas1.vue";
+import Sesion from "../Pages/Sesion.vue";
+import Login from "../Pages/Login.vue";
+import Registro from "../Pages/Registro.vue";
 
 const routes = [
     {
@@ -34,13 +36,11 @@ const routes = [
         name: "horario2",
         component: Horario2,
     },
-    
     {
         path: "/calculadoraV1",
         name: "calculadoraV1",
         component: CalculadoraV1,
     },
-    
     {
         path: "/calculadoraV2",
         name: "calculadoraV2",
@@ -51,7 +51,6 @@ const routes = [
         name: "eventos",
         component: Eventos,
     },
-
     {
         path: "/padre",
         name: "padre",
@@ -67,7 +66,23 @@ const routes = [
         name: "listas",
         component: Listas,
     },
-    
+    {
+        path: "/sesion",
+        name: "sesion",
+        component: Sesion,
+        children: [
+            {
+                path: "login",
+                name: "login",
+                component: Login,
+            },
+            {
+                path: "registro",
+                name: "registro",
+                component: Registro,
+            },
+        ],
+    },
 ];
 
 const router = createRouter({

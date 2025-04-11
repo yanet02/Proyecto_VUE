@@ -38,6 +38,8 @@ export default {
   background-color: #0d1b2a;
   padding: 20px;
   border-radius: 10px;
+  margin-top: 20px; /* Espacio superior */
+  margin-bottom: 20px; /* Espacio inferior añadido */
 }
 
 .alumnos-title {
